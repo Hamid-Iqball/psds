@@ -1,5 +1,5 @@
 import { axiosInstance } from "../utilities/AxiosInstance";
-// EndPoints
+
 export const postApi = {
   getAll: function () {
     return axiosInstance.request({
@@ -27,8 +27,6 @@ export const postApi = {
       method: "PATCH",
       url: `/Posts/${id}`,
       data: updateData,
-
-      // updateData: ,
     });
   },
 };
