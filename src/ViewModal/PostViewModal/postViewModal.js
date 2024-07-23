@@ -9,11 +9,13 @@ const postViewModal = (set, get) => ({
     set({ posts: data });
   },
 
+  // Send Post
   sendPosts: function (data) {
     console.log("data", data);
     set({ posts: [...new Set([...get().posts, data])] });
   },
 
+  // Delete Post
   deletePost: async function (id) {
     try {
       await postApi.deletePost(id);
@@ -25,6 +27,7 @@ const postViewModal = (set, get) => ({
     }
   },
 
+  // Update Post
   updatePost: async function (id, updateData) {
     console.log("id", id);
     try {
